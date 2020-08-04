@@ -2,10 +2,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: './build/main.js',
+    entry: './game/main.js',
     output: {
       path: __dirname + '/output',
-      filename: 'webpack.js'
+      filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -18,7 +18,7 @@ module.exports = {
             }
         ]
     }, 
-    plugins: [new HtmlWebpackPlugin({ template: './build/index.html'})],
+    plugins: [new HtmlWebpackPlugin({ template: './game/index.html'})],
     devServer:{
         contentBase: './output'
     }

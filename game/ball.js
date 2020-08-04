@@ -8,6 +8,7 @@ export let y = canvas.height-30;
 export let dx = 2;
 export let dy = -2;
 
+export const setDy = (value) => dy = value;
 
 var lives = 3;
 
