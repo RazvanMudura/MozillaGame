@@ -6,9 +6,10 @@ const ballRadius = 10;
 export let x = canvas.width/2;
 export let y = canvas.height-30;
 export let dx = 2;
-export let dy = -2;
+let dy = -2;
 
 export const setDy = (value) => dy = value;
+export const getDy = () => dy;
 
 var lives = 3;
 

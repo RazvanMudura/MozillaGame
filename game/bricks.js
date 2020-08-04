@@ -1,5 +1,5 @@
 import { ctx } from './canvas.js'
-import { x,y,dx,dy, setDy } from './ball.js'
+import { x,y,dx,setDy,getDy} from './ball.js'
 import { score } from './score.js'
 import { interval } from './main.js'
 
@@ -47,8 +47,7 @@ export const collisionDetection = () => {
             var b = bricks[c][r];
             if(b.status == 1) {
                 if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    // dy = -dy;
-                    setDy(-dy)
+                    setDy(-getDy())
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
